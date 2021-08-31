@@ -1,0 +1,194 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icons/icomoon.eot?q3d6xu");
+  src: url("../fonts/icons/icomoon.eot?q3d6xu#iefix")
+      format("embedded-opentype"),
+    url("../fonts/icons/icomoon.ttf?q3d6xu") format("truetype"),
+    url("../fonts/icons/icomoon.woff?q3d6xu") format("woff"),
+    url("../fonts/icons/icomoon.svg?q3d6xu#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-linkedin2:before {
+  content: "\eaca";
+}
+.icon-pinterest2:before {
+  content: "\ead2";
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: #171919;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  /*font-family: 'Lobster', cursive;*/
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#header {
+  background: url(../img/bg-header.jpeg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  text-align: center;
+}
+
+.header__title {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.title-text {
+  font-size: 36px;
+  font-weight: bold;
+  color: #cc005f;
+  text-transform: uppercase;
+}
+
+.header__title-text {
+  font-size: 80px;
+	font-family: 'Lobster', cursive;
+  overflow: hidden;
+  margin: 30px auto;
+  white-space: nowrap;
+  letter-spacing: 0.15em;
+  animation: typing 3.5s steps(40, end);
+
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.spec {
+  text-align: center;
+}
+
+.spec p {
+  display: inline-block;
+  border-left: 1px solid #fff;
+  font-size: 20px;
+  padding: 0 15px;
+}
+.spec p + p {
+  border-right: 1px solid #fff;
+	margin-top: 10px;
+}
+
+.header__btn {
+  margin-top: 70px;
+  cursor: pointer;
+  border: 3px solid rgb(255, 255, 255, 0.3);
+  border-radius: 5px;
+  width: 230px;
+  height: 70px;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: transparent;
+  transition: all 0.3s;
+}
+
+.header__btn:hover {
+  background-color: #548dd4;
+  border-color: #548dd4;
+}
+
+.soc {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+}
+
+.soc i {
+  font-size: 30px;
+  padding-right: 30px;
+  transition: all 0.3s;
+}
+
+.soc i:hover {
+  color: #548dd4;
+}
+
+
+@media screen and (max-width:920px){
+	.header__title-text{
+		font-size: 50px;
+	}
+}
+	
+@media screen and (max-width:620px){
+	.header__title-text{
+		font-size: 30px;
+	}
+	.title-text{
+		font-size: 20px;
+	}
+	.spec p {
+		
+		border-right: 1px solid #fff;
+}
