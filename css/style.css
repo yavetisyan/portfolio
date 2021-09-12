@@ -86,7 +86,7 @@ li {
 }
 
 .header__title {
-  height: 100vh;
+  height: 92vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -121,10 +121,6 @@ li {
   }
 }
 
-.spec {
-  text-align: center;
-}
-
 .spec p {
   display: inline-block;
   border-left: 1px solid #fff;
@@ -156,17 +152,17 @@ li {
   border-color: #548dd4;
 }
 
-.soc {
+/* .soc {
   position: absolute;
   bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
-  width: 200px;
-}
+  
+} */
 
 .soc i {
   font-size: 30px;
-  padding-right: 30px;
+  padding:0 30px;
   transition: all 0.3s;
 }
 
