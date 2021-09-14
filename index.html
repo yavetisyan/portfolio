@@ -5,14 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header id="header">
       <div class="container">
+        <div class="header__menu">
+          <a href="#!" class="logo">
+            <img src="img/logo.png" alt="Logo" />
+          </a>
+          <nav>
+            <ul>
+              <li><a href="#!" class="active">Home</a></li>
+              <li><a href="#!">About</a></li>
+              <li><a href="#!">Experianc</a></li>
+              <li><a href="#!">Work</a></li>
+              <li><a href="#!">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+
         <div class="header__title">
           <h3 class="title-text">Hello world</h3>
 
@@ -28,7 +46,10 @@
           <a href="https://www.facebook.com/yura.avetisyan" target="_blank">
             <i class="icon-facebook"></i>
           </a>
-          <a href="https://www.linkedin.com/in/yura-avetisyan-397303b7/#" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/yura-avetisyan-397303b7/#"
+            target="_blank"
+          >
             <i class="icon-linkedin2"></i>
           </a>
           <a href="https://www.pinterest.co.uk/mravetisyan/" target="_blank">
@@ -37,6 +58,62 @@
         </div>
       </div>
     </header>
+
+    <section id="about">
+      <div class="container">
+        <div class="about__title">
+          <div class="about__inner">
+            <div class="about__info">
+              <img src="img/img-1.jpg" alt="Pic" />
+              <div class="about__descr">
+                <p><span>Name: </span>Yuri Avetisyan</p>
+                <p><span>Profile: </span>JavaScript developer</p>
+                <p><span>Email: </span>y.avetisyan@yahoo.com</p>
+                <p><span>Phone: </span>(+374) 93-920924</p>
+              </div>
+            </div>
+            <div class="about__skills">
+              <h4>Skill</h4>
+              <div class="about__skill-name">
+								<p>HTML</p>
+                <p>85%</p>
+              </div>
+							<progress max="100" , value="85">asdfsad</progress>
+              <div class="about__skill-name">
+                <p>CSS</p>
+                <p>60%</p>
+              </div>
+							<progress max="100" , value="60">asdfsad</progress>
+              <div class="about__skill-name">
+                <p>JavaScript</p>
+                <p>20%</p>
+              </div>
+							<progress max="100" , value="20">asdfsad</progress>
+            </div>
+          </div>
+          <div class="about__inner">
+            <h3>About me</h3>
+            <p class="about__text">
+              Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
+              Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+              Praesent sapien massa, convallis a pellentesque nec, egestas non
+              nisi. Nulla porttitor accumsan tincidunt.
+            </p>
+            <p class="about__text">
+              Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+              Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum
+              ac diam sit amet quam vehicula elementum sed sit amet dui.
+              porttitor at sem.
+            </p>
+            <p class="about__text">
+              Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut
+              lacinia in, elementum id enim. Nulla porttitor accumsan tincidunt.
+              Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <script src="js/script.js"></script>
   </body>
