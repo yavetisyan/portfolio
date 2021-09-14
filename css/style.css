@@ -88,13 +88,14 @@ li {
 
 .header__menu {
   width: 100%;
-  min-height: 200px;
+  min-height: 130px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+
+  /*position: fixed;
   left: 0;
-  padding: 0 150px;
+  padding: 0 150px;*/
 }
 
 nav ul {
@@ -129,7 +130,7 @@ nav li:hover a {
 }
 
 .header__title {
-  height: 100vh;
+  height: calc(100vh - 275px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -152,6 +153,10 @@ nav li:hover a {
   white-space: nowrap;
   letter-spacing: 0.15em;
   animation: typing 3.5s steps(40, end);
+}
+
+.header__btn {
+  transition: all 0.6s;
 }
 
 @keyframes typing {
