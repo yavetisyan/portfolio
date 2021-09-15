@@ -3,33 +3,29 @@ const link = document.getElementsByClassName("menu__link");
 
 for (let i = 0; i < link.length; i++) {
   link[i].addEventListener("click", function (e) {
-    let aLink = document.querySelector("a.active");
+    let aLink = document.querySelector(".active");
+    let l = link[i];
+    let scrollLink = l.getAttribute("href");
+
     if (aLink !== null) {
       aLink.classList.remove("active");
     }
-    e.target.className = "active";
+    l.classList.toggle("active");
+
+    e = document.querySelector(scrollLink);
+
+    e.scrollIntoView({
+      behavior: "smooth",
+    });
   });
 }
 
 // about me button scroll
 const button = document.querySelector(".header__btn");
 
-button.addEventListener("click", () => {
-  (about = document.querySelector("#about")),
-    about.scrollIntoView({
+button.addEventListener("click", (e) => {
+  (e = document.querySelector("#about")),
+    e.scrollIntoView({
       behavior: "smooth",
     });
 });
-
-const menu = document.getElementsByClassName("menu__link");
-
-for (let i = 0; i < menu.length; i++) {
-  menu[i].addEventListener("click", function () {
-    const hrefLink = menu[i].getAttributeNames("href");
-    let aa = document.querySelector(hrefLink);
-    console.log(aa);
-    aa.scrollIntoView({
-      behavior: "smooth",
-    });
-  });
-}
