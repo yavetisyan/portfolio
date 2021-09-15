@@ -92,10 +92,11 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /*
+
   position: fixed;
   left: 0;
-  padding: 0 150px;*/
+  padding: 0 150px;
+  z-index: 10;
 }
 
 nav ul {
@@ -113,6 +114,7 @@ nav a {
   padding: 10px 15px;
   border-radius: 8px;
   transition: all 0.3s;
+  cursor: pointer;
 }
 nav .active {
   border: 2px solid #548dd4;
@@ -130,7 +132,7 @@ nav li:hover a {
 }
 
 .header__title {
-  height: calc(100vh - 275px);
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -238,6 +240,12 @@ nav li:hover a {
 
 #about {
   padding: 150px 0;
+  background: url(../img/bg7.jpg) no-repeat center center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  display: block;
+  color: #fff;
 }
 
 .about__title {
@@ -323,12 +331,13 @@ progress {
   position: relative;
 }
 
-.cotact__title {
+.contact__title {
   background-color: #fff;
   display: flex;
   justify-content: space-between;
   align-content: center;
   padding: 50px;
+  border-radius: 10px;
 }
 
 .contact__inner {
@@ -378,16 +387,16 @@ progress {
 .contact__inner p + p {
   margin-top: 30px;
 }
-footer{
-	background-color:#000;
-	padding:30px 0;	
+footer {
+  background-color: #000;
+  padding: 30px 0;
 }
 .copyR {
   text-align: center;
   color: #fff;
   font-size: 20px;
-	 width:320;
-	 margin: 0 auto;
+  width: 320;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 992px) {
@@ -412,11 +421,11 @@ footer{
 }
 
 @media screen and (max-width: 760px) {
-	#about{
-		padding: 60px 0;
-	}
+  #about {
+    padding: 60px 0;
+  }
   #contact {
-    padding: 40px 50px ;
+    padding: 20px 0;
   }
   .about__info {
     display: block;
@@ -435,36 +444,42 @@ footer{
   }
   .contact__inner {
     width: 100%;
-		margin-bottom: 20px;
-    
+    margin-bottom: 20px;
   }
   .contact__btn {
     text-align: center;
-		
   }
-	.inner__text{
-		font-size: 30px;
-	}
-	.cotact__title{
-		padding: 10px 30px;
-	}
+  .inner__text {
+    font-size: 30px;
+  }
+  .cotact__title {
+    padding: 10px 30px;
+  }
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
+  .about__text {
+    font-size: 14px;
+    text-align: justify;
+  }
+  .contact__inner p {
+    text-align: justify;
+  }
+
   .about__inner-info {
     display: block;
   }
-	.about__inner img{
-		display: block;
-		margin: 0 auto;
-		margin-bottom: 30px;
-	}
-	.about__descr{
-		text-align: center;
-		width: 100%;
-	}
-	.about__skills{
-		width: 100%;
-		margin-bottom: 30px;
-	}
+  .about__inner img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .about__descr {
+    text-align: center;
+    width: 100%;
+  }
+  .about__skills {
+    width: 100%;
+    margin-bottom: 30px;
+  }
 }

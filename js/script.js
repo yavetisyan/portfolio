@@ -5,18 +5,18 @@ for (let i = 0; i < link.length; i++) {
   link[i].addEventListener("click", function (e) {
     let aLink = document.querySelector(".active");
     let l = link[i];
-    let scrollLink = l.getAttribute("href");
 
     if (aLink !== null) {
       aLink.classList.remove("active");
     }
     l.classList.toggle("active");
 
-    e = document.querySelector(scrollLink);
+    //let scrollLink = l.getAttribute("href");
+    //e = document.querySelector(scrollLink);
 
-    e.scrollIntoView({
-      behavior: "smooth",
-    });
+    //e.scrollIntoView({
+    //  behavior: "smooth",
+    //});
   });
 }
 
@@ -28,4 +28,18 @@ button.addEventListener("click", (e) => {
     e.scrollIntoView({
       behavior: "smooth",
     });
+});
+
+// navbar scroll
+let scrolLink = document.querySelectorAll(".menu__link");
+
+scrolLink.forEach((item) => {
+  item.addEventListener("click", () => {
+    const it = item.getAttribute("data-link");
+    const el = document.getElementById(it);
+
+    el.scrollIntoView({
+      behavior: "smooth",
+    });
+  });
 });
