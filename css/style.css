@@ -10,9 +10,10 @@
   font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icons' !important;
+  font-family: "icons" !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -224,6 +225,10 @@ nav li:hover a {
   color: #548dd4;
 }
 
+.header__menu img {
+  margin-left: 50px;
+}
+
 @media screen and (max-width: 920px) {
   .header__title-text {
     font-size: 50px;
@@ -405,6 +410,12 @@ footer {
   margin: 0 auto;
 }
 
+a.logo {
+  margin-left: 50px;
+}
+nav {
+  margin-right: 50px;
+}
 @media screen and (max-width: 992px) {
   .about__title {
     display: block;
@@ -464,6 +475,12 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
+  #about {
+    height: auto;
+  }
+  #contact {
+    height: auto;
+  }
   .menu__btn {
     display: block;
     font-size: 50px;
@@ -506,7 +523,7 @@ footer {
     top: 89px;
     height: 100vh;
     background: rgb(34 32 32 / 95%);
-    right: -215px;
+    right: -270px;
     width: 215px;
 
     transition: all 0.3s;
@@ -521,11 +538,9 @@ footer {
     width: 100%;
     text-align: center;
   }
-  .header__menu img {
-    margin-left: 50px;
-  }
+
   .navBar {
-    right: 0;
+    right: -50px;
   }
 
   .soc {
