@@ -10,13 +10,6 @@ for (let i = 0; i < link.length; i++) {
       aLink.classList.remove("active");
     }
     l.classList.toggle("active");
-
-    //let scrollLink = l.getAttribute("href");
-    //e = document.querySelector(scrollLink);
-
-    //e.scrollIntoView({
-    //  behavior: "smooth",
-    //});
   });
 }
 
@@ -28,6 +21,9 @@ button.addEventListener("click", (e) => {
     e.scrollIntoView({
       behavior: "smooth",
     });
+	
+		
+
 });
 
 // navbar scroll
@@ -42,4 +38,13 @@ scrolLink.forEach((item) => {
       behavior: "smooth",
     });
   });
+});
+
+// button navbar
+
+let navBtn = document.querySelector(".menu__btn");
+navBtn.addEventListener("click", function () {
+  let nav = document.querySelector("nav");
+  nav.classList.toggle("navBar");
+
 });

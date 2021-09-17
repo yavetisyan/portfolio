@@ -1,11 +1,10 @@
 @font-face {
-  font-family: "icomoon";
-  src: url("../fonts/icons/icomoon.eot?q3d6xu");
-  src: url("../fonts/icons/icomoon.eot?q3d6xu#iefix")
-      format("embedded-opentype"),
-    url("../fonts/icons/icomoon.ttf?q3d6xu") format("truetype"),
-    url("../fonts/icons/icomoon.woff?q3d6xu") format("woff"),
-    url("../fonts/icons/icomoon.svg?q3d6xu#icomoon") format("svg");
+  font-family: "icons";
+  src: url("../fonts/icons/icons.eot?d8iol");
+  src: url("../fonts/icons/icons.eot?d8iol#iefix") format("embedded-opentype"),
+    url("../fonts/icons/icons.ttf?d8iol") format("truetype"),
+    url("../fonts/icons/icons.woff?d8iol") format("woff"),
+    url("../fonts/icons/icons.svg?d8iol#icons") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -14,7 +13,7 @@
 [class^="icon-"],
 [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon" !important;
+  font-family: "icons" !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -27,6 +26,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-th-menu:before {
+  content: "\e901";
+}
+.icon-arrow-left1:before {
+  content: "\e900";
+}
+.icon-arrow-left:before {
+  content: "\ea38";
+}
 .icon-facebook:before {
   content: "\ea90";
 }
@@ -36,11 +44,6 @@
 .icon-pinterest2:before {
   content: "\ead2";
 }
-
-html {
-  box-sizing: border-box;
-}
-
 *,
 *::before,
 *::after {
@@ -85,18 +88,19 @@ li {
   position: relative;
   color: #fff;
 }
-
+.menu__btn {
+  display: none;
+}
 .header__menu {
   width: 100%;
-  min-height: 130px;
+  min-height: 90px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   left: 0;
-  padding: 0 150px;
-  z-index: 10;
+  z-index: 1;
 }
 
 nav ul {
@@ -128,7 +132,7 @@ nav li:hover a {
 }
 
 .header__menu img {
-  width: 100px;
+  width: 60px;
 }
 
 .header__title {
@@ -458,6 +462,15 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
+  .menu__btn {
+    display: block;
+    font-size: 50px;
+    background: transparent;
+    color: #fff;
+    border: none;
+    padding-right: 50px;
+    cursor: pointer;
+  }
   .about__text {
     font-size: 14px;
     text-align: justify;
@@ -484,5 +497,42 @@ footer {
   }
   .contact__title {
     display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 89px;
+    height: 100vh;
+    background: rgb(34 32 32 / 95%);
+    right: -215px;
+    width: 215px;
+
+    transition: all 0.3s;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    height: 40vh;
+    margin-top: 50px;
+  }
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+  .header__menu img {
+    margin-left: 50px;
+  }
+  .navBar {
+    right: 0;
+  }
+
+  .soc {
+    left: 45%;
+    transform: translateX(-45%);
+  }
+
+  .spec {
+    display: flex;
+    flex-direction: column;
   }
 }
