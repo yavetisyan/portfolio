@@ -10,10 +10,9 @@
   font-display: block;
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
+[class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icons" !important;
+  font-family: 'icons' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -31,6 +30,9 @@
 }
 .icon-arrow-left1:before {
   content: "\e900";
+}
+.icon-cancel-circle:before {
+  content: "\ea0d";
 }
 .icon-arrow-left:before {
   content: "\ea38";

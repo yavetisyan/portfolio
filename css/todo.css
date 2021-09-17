@@ -32,6 +32,9 @@
 .icon-arrow-left1:before {
   content: "\e900";
 }
+.icon-cancel-circle:before {
+  content: "\ea0d";
+}
 .icon-arrow-left:before {
   content: "\ea38";
 }
