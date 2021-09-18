@@ -64,6 +64,11 @@ body {
   /*font-family: 'Lobster', cursive;*/
 }
 
+ img:hover {
+  transform: scale(1.5);
+  box-sizing: border-box;
+  overflow: hidden;
+}
 a {
   display: inline-block;
   text-decoration: none;

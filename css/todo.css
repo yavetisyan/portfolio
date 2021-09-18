@@ -172,7 +172,7 @@ h1 {
   background-color: rgba(255, 255, 255, 0.8);
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  margin-bottom: 10px;
+
 }
 
 .icon-cancel-circle {
@@ -211,6 +211,14 @@ h1 {
 .arrow i:hover {
   color: #53daff;
 }
+
+.data {
+
+	padding: 0 20px;
+	margin-bottom: 15px;
+	color: #fff;
+}
+
 @media screen and (max-width: 600px) {
   h1 {
     text-align: center;
