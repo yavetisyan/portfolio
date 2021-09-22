@@ -18,8 +18,6 @@ btn.addEventListener("click", function () {
   let newP = document.createElement("p");
   let removBtn = document.createElement("span");
   let dataDiv = document.createElement("div");
-  let dataList = document.querySelector(".data__list");
-  let timeList = document.querySelector(".time__list");
   let span = document.createElement("span");
 
   if (input.value !== "") {
@@ -34,8 +32,11 @@ btn.addEventListener("click", function () {
     newLi.prepend(removBtn);
     newLi.prepend(newP);
     newP.innerText = input.value;
+    dataDiv.append(span);
     dataDiv.classList.add("data");
-    dataDiv.innerHTML = getDate();
+    dataDiv.append(span);
+    span.append(getDate());
+    
 
     //dataDiv.appendChild(document.createElement("span").classList.add(dataList));
 

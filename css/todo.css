@@ -10,10 +10,9 @@
   font-display: block;
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
+[class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icons" !important;
+  font-family: 'icons' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -35,8 +34,17 @@
 .icon-cancel-circle:before {
   content: "\ea0d";
 }
-.icon-arrow-left:before {
-  content: "\ea38";
+.icon-play2:before {
+  content: "\ea15";
+}
+.icon-stop:before {
+  content: "\ea17";
+}
+.icon-circle-right:before {
+  content: "\ea42";
+}
+.icon-circle-left:before {
+  content: "\ea44";
 }
 .icon-facebook:before {
   content: "\ea90";
