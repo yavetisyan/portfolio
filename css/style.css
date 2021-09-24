@@ -111,12 +111,13 @@ li {
   width: 100%;
   min-height: 90px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   left: 0;
   z-index: 1;
+	padding: 0 10px;
 }
 
 nav ul {
@@ -238,9 +239,6 @@ nav li:hover a {
   color: #548dd4;
 }
 
-.header__menu img {
-  margin-left: 50px;
-}
 
 @media screen and (max-width: 920px) {
   .header__title-text {
@@ -423,12 +421,8 @@ footer {
   margin: 0 auto;
 }
 
-a.logo {
-  margin-left: 50px;
-}
-nav {
-  margin-right: 50px;
-}
+
+
 @media screen and (max-width: 992px) {
   .about__title {
     display: block;
@@ -500,7 +494,6 @@ nav {
     background: transparent;
     color: #fff;
     border: none;
-    padding-right: 50px;
     cursor: pointer;
   }
   .about__text {
@@ -536,7 +529,7 @@ nav {
     top: 89px;
     height: 100vh;
     background: rgb(34 32 32 / 95%);
-    right: -270px;
+    right: -200px;
     width: 215px;
 
     transition: all 0.3s;
@@ -553,7 +546,7 @@ nav {
   }
 
   .navBar {
-    right: -50px;
+    right: 0;
   }
 
   .soc {
