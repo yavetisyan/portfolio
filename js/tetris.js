@@ -120,8 +120,8 @@ let figures = {
     [0, 0, 0],
   ],
   I: [
+		[0, 0, 0, 0],
     [1, 1, 1, 1],
-    [0, 0, 0, 0],
     [0, 0, 0, 0],
     [0, 0, 0, 0],
   ],
@@ -385,10 +385,6 @@ document.addEventListener("keydown", function (e) {
       case "ArrowUp":
         console.log("Up");
         rotateBlock();
-        break;
-
-      case " ":
-        console.log("Pause");
         break;
 
       case "Enter":
