@@ -18,12 +18,12 @@ let posLevel = {
   1: {
     scorePerLine: 10,
     speed: 1000,
-    nextLevelScore: 500,
+    nextLevelScore: 200,
   },
   2: {
     scorePerLine: 15,
     speed: 900,
-    nextLevelScore: 1500,
+    nextLevelScore: 400,
   },
   3: {
     scorePerLine: 30,
@@ -288,10 +288,10 @@ function checkLines() {
       score += posLevel[currentLevel].scorePerLine * 2;
       break;
     case 3:
-      score += posLevel[currentLevel].scorePerLine * 3;
+      score += posLevel[currentLevel].scorePerLine * 5;
       break;
     case 4:
-      score += posLevel[currentLevel].scorePerLine * 4;
+      score += posLevel[currentLevel].scorePerLine * 10;
       break;
   }
 
