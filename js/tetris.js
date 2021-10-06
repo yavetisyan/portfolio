@@ -13,6 +13,8 @@ let movingBlockStyle = document.getElementsByClassName(".movingBlock");
 let currentLevel = 1;
 let isPaused = true;
 let timerId;
+const colors = ["#0341AE", "#72CB3B", "#FFD500", "#FF971C", "#FF3213", "#69326B"];
+let color = colors[getRandomColor(0, 5)];
 
 let posLevel = {
   1: {
@@ -120,7 +122,7 @@ let figures = {
     [0, 0, 0],
   ],
   I: [
-		[0, 0, 0, 0],
+    [0, 0, 0, 0],
     [1, 1, 1, 1],
     [0, 0, 0, 0],
     [0, 0, 0, 0],
@@ -147,12 +149,10 @@ function drawBlock() {
 
   main.innerHTML = mainInner;
 
-  //if(main.className === 'fixedBlock'){
-  //	main.classList.remove('movingBlock')
-  //	main.classList.add('cGreen');
-  //}else{
-  //	main.classList.remove('cGreen');
-  //}
+  let activeColor = document.querySelectorAll(".movingBlock");
+  for (let el of activeColor) {
+    el.style.backgroundColor = color;
+  }
 }
 
 // add Active blocks
@@ -181,22 +181,18 @@ function rotateBlock() {
   }
 }
 // random color
-function getRandomColor() {
-  var letters = "0123456789ABCDEF";
-  var color = "#";
-  for (var i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
+function getRandomColor(x, y) {
+  let r = Math.floor(Math.random() * (y - x + 1)) + x;
+  return r;
 }
 
 // random blocks
 
 function randomBlocks() {
   const randomFigures = "IOLJTSZ";
-  const rand = Math.floor(Math.random() * 7);
+  const rand = Math.floor(Math.random() * 5);
   const newBlock = figures[randomFigures[rand]];
-
+   color = colors[getRandomColor(0, 5)];
   return {
     column: 0,
     row: Math.floor((10 - newBlock[0].length) / 2),
@@ -313,6 +309,7 @@ function moveBlocksDown() {
       gameOver.style.opacity = 1;
       reset();
     }
+
     nextBlock = randomBlocks();
   }
 }
@@ -415,6 +412,7 @@ startBtn.addEventListener("click", () => {
   isPaused = false;
   timerId = setTimeout(startGame, posLevel[currentLevel].speed);
 });
+
 scoreElem.innerHTML = score;
 levelElem.innerHTML = currentLevel;
 
@@ -424,9 +422,9 @@ drawBlock();
 let playPause;
 
 function startGame() {
-  moveBlocksDown();
+	moveBlocksDown();
   if (!isPaused) {
-    addActiveBlock();
+		addActiveBlock();
     drawBlock();
     drowNextBlock();
 

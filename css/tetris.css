@@ -49,7 +49,8 @@ body {
 }
 
 .tetris {
-  margin: 20px auto;
+  margin-top: 20px;
+	margin-right: 30px;
 	width: 270px;
 	height: 520px;
   border: 10px solid dimgrey;
@@ -84,7 +85,7 @@ body {
 }
 
 .game__info {
-  margin-top: 45px;
+  margin-top: 15px;
 }
 
 .nextBlock  {
@@ -99,20 +100,22 @@ body {
   color: #fff;
   position: absolute;
   top: 50%;
-  left: 27%;
+  left: 10%;
+  /*transform: translateX(-27%);*/
   font-size: 35px;
-  transform: translateX(-27%);
   opacity: 0;
   transition: all 0.5s;
 }
+
+.pause{
+	left: 18%;
+}
 .buttons {
 	display: flex;
-	justify-content: space-between;
-	width: 200px;
-	margin: 0 15%;
+flex-direction: column;
 }
 .buttons button {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   padding: 10px 20px;
   height: 40px;
   cursor: pointer;
